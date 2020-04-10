@@ -27,10 +27,10 @@ public class newSorting {
     void quickMain(int arr[], int low, int high) {
         if (low < high) {
 
-            int half = quickSort(arr, low, high);
+            int p = quickSort(arr, low, high);
 
-            quickMain(arr, low, half-1);
-            quickMain(arr, half+1, high);
+            quickMain(arr, low, p-1);
+            quickMain(arr, p+1, high);
         }
     }
     public int quickSort(int[] A, int start, int end){
