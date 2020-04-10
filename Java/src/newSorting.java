@@ -26,9 +26,9 @@ public class newSorting {
     }
     void quickMain(int arr[], int low, int high) {
         if (low < high) {
-
+            //pivot of the array
             int p = quickSort(arr, low, high);
-
+            //sorting recursively with the arrays left from the pivot and right aswell
             quickMain(arr, low, p-1);
             quickMain(arr, p+1, high);
         }
