@@ -12,12 +12,13 @@ public class newSortingTester {
         int[] answer = {1,3,4,5,6}; //The expected output
         assertArrayEquals(answer,alan);
     }
-    //Seeing if repetitions of get sorted in the array or end up being mixed up
+    //Seeing if repetitions of get sorted in the array or end up being mixed up and if it will get sorted when size is
+    //equal to the length of the array
     @Test
     public void test2(){
         newSorting ns = new newSorting(); //Initiating class to sort array
         int[] alan = {6,1,8,1,3,1,5};
-        ns.sort(alan,2); //Sorting with arrays of length 2
+        ns.sort(alan,5); //Sorting with arrays of length 2
         int[] answer = {1,1,1,3,5,6,8};  //The expected answer
         assertArrayEquals(answer,alan);
     }

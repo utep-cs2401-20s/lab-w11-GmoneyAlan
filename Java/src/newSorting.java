@@ -22,9 +22,18 @@ public class newSorting {
     }
 
     public void quickSort(int[] A){
-        quickSort( A, 0, A.length - 1);
+        quickMain( A, 0, A.length - 1);
     }
-    public void quickSort(int[] A, int start, int end){
+    void quickMain(int arr[], int low, int high) {
+        if (low < high) {
+
+            int half = quickSort(arr, low, high);
+
+            quickMain(arr, low, half-1);
+            quickMain(arr, half+1, high);
+        }
+    }
+    public int quickSort(int[] A, int start, int end){
         int pivot = A[end];
         int low = start - 1; // index of smaller element
         //loop to sort numbers whether bigger or smaller than the pivot
@@ -40,6 +49,8 @@ public class newSorting {
         int temp = A[low + 1];
         A[low + 1] = A[end];
         A[end] = temp;
+
+        return low + 1;
     }
     public void mergeSortedHalves(int[] A, int[] L, int[] R){
 
